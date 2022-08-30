@@ -1,0 +1,132 @@
+:root {
+  --clr-primary-red: hsl(0, 78%, 62%);
+  --clr-primary-cyan: hsl(180, 62%, 55%);
+  --clr-primary-orange: hsl(34, 97%, 64%);
+  --clr-primary-blue: hsl(212, 86%, 64%);
+
+  --clr-neutral-darkblue: hsl(234, 12%, 34%);
+  --clr-neutral-grayblue: hsl(229, 6%, 66%);
+  --clr-neutral-lightgray: hsl(0, 0%, 98%);
+
+  --fnt-200w: 200;
+  --fnt-400w: 400;
+  --fnt-600w: 600;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--clr-neutral-lightgray);
+  font-size: 15px;
+  font-family: "Poppins", Courier, monospace;
+}
+
+.container {
+  margin: 5em 3em;
+}
+
+header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: var(--fnt-600w);
+}
+
+header h1 span {
+  color: #666875;
+  font-weight: var(--fnt-200w);
+}
+
+header p {
+  font-size: 0.9rem;
+  color: var(--clr-neutral-grayblue);
+}
+
+main .card {
+  font-size: 0.8rem;
+  padding: 1em 2em;
+  background-color: white;
+  margin-bottom: 2em;
+  border-top: 4px solid;
+  border-radius: 5px 5px 10px 10px;
+  box-shadow: hsla(234, 12%, 34%, 0.2) 0px 7px 29px 0px;
+  clear: both;
+  overflow: hidden;
+}
+
+main .card-1 {
+  border-top-color: var(--clr-primary-cyan);
+}
+main .card-2 {
+  border-top-color: var(--clr-primary-red);
+}
+main .card-3 {
+  border-top-color: var(--clr-primary-orange);
+}
+main .card-4 {
+  border-top-color: var(--clr-primary-blue);
+}
+
+main p {
+  color: var(--clr-neutral-grayblue);
+}
+
+main img {
+  float: right;
+  margin: 1.5rem 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 860px) {
+  header {
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 4em;
+  }
+
+  main {
+    display: grid;
+    grid-template-areas:
+      "...... card-2 ......"
+      "card-1 card-2 card-4"
+      "card-1 card-3 card-4"
+      "...... card-3 ......";
+    justify-content: center;
+    grid-auto-columns: minmax(minmax(0, 1fr), max-content);
+    gap: 2em;
+  }
+
+  main .card-1 {
+    grid-area: card-1;
+  }
+  main .card-2 {
+    grid-area: card-2;
+  }
+  main .card-3 {
+    grid-area: card-3;
+  }
+  main .card-4 {
+    grid-area: card-4;
+  }
+
+  main .card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0;
+  }
+}
