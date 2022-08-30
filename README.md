@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [SOLUTION](https://www.frontendmentor.io/solutions/responsive-four-card-feature-section-using-css-grid-LtNMj0D_gT)
+- Live Site URL: [LIVE SITE](https://azizp128.github.io/Four-Card-Feature-Section/)
 
 ## My process
 
